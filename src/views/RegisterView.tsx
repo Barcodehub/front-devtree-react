@@ -1,11 +1,12 @@
 import {Link} from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import axios, {isAxiosError} from 'axios'
 import ErrorMessage from '../components/ErrorMessage'
-
+import type { RegisterForm } from '../types'
 
 export default function RegisterView() {
 
-    const initialValues = { //valores iniciales vacios en el formulario / pa evitar mensajes de error iniciales al no tener nada
+    const initialValues : RegisterForm = { //valores iniciales vacios en el formulario / pa evitar mensajes de error iniciales al no tener nada
         name: '',
         email: '',
         handle: '',
@@ -15,15 +16,23 @@ export default function RegisterView() {
 
 
 
-  const { register, watch, handleSubmit, formState:{errors}} = useForm({defaultValues : initialValues})
+  const { register, watch, reset, handleSubmit, formState:{errors}} = useForm({defaultValues : initialValues})
 
 
     const password = watch('password')  //leemos, para luego comparar las contraseñas sean iguales
 
 
 
-    const handleRegister = () => {
-        console.log('')
+    const handleRegister = async(formData :  RegisterForm) => { //enviamos al backend
+        try {
+            const response = await axios.post(`${import.meta.env.BACKEND_URL}/auth/register`, formData)
+            console.log(response)
+            reset()
+        } catch (error) {
+           if(isAxiosError(error) && error.response){
+                console.log(error.response?.data.error)
+           }
+        }
     }
 
   return (

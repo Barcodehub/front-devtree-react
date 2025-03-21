@@ -9,4 +9,5 @@
 
 Cambios hechos:
 
-validaciones de formualrio con React Hook Form
+lectura de datos del formulario types/
+registro de usuarios con axios en handleRegister()
