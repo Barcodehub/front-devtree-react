@@ -9,5 +9,5 @@
 
 Cambios hechos:
 
-lectura de datos del formulario types/
-registro de usuarios con axios en handleRegister()
+- mensaje de error con la libreria sooner
+- cliente de axios para usar el link del backend
