@@ -8,6 +8,7 @@
 
 
 Cambios hechos:
-
-- mensaje de error con la libreria sooner
-- cliente de axios para usar el link del backend
+- React Query:
+- auth user con token
+- envio de token localstorage
+- restringir acceso a las vistas con token
