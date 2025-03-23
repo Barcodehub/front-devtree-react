@@ -9,6 +9,4 @@
 
 Cambios hechos:
 - React Query:
-- auth user con token
-- envio de token localstorage
-- restringir acceso a las vistas con token
+- Actualizar Profile con Mutation
