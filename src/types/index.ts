@@ -5,7 +5,7 @@ export type User = {
     password: string
     _id: string
     description: string
-  //  image: string
+    image: string
   //  links: string
 }
 

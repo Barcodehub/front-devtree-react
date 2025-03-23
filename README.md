@@ -9,4 +9,4 @@
 
 Cambios hechos:
 - React Query:
-- Actualizar Profile con Mutation
+- Subida a Cloudinary profile-Image
