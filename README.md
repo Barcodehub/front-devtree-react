@@ -8,5 +8,7 @@
 
 
 Cambios hechos:
-- React Query:
-- Subida a Cloudinary profile-Image
+- Links a redes sociales
+- boton de habilitar o deshabilitar
+- validacion url validas
+useEffect
